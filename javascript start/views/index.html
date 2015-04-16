@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>hello</title>
+    <!-- link to extern javascript -->
+    <script language="javascript" src="./javascripts/addFunction2.js"></script>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        
+        document.write(Number.MAX_VALUE + "<br />");
+        document.write(Number.MIN_VALUE + "<br />");
+        
+        var samp_str="Here are some secape characters\" \' \\ \t 'n";
+        document.write(samp_str +"<br />");
+
+        var first_str = "First String";
+        var second_str = "Second string";
+
+        var combine = first_str + second_str;
+        document.write(combine + "<br />");
+        document.write("Length of string: " +combine.length + "<br />");
+        document.write("Substring " + combine.substring(6,12) + "<br />");
+        document.write("Last Character " + combine.charAt(combine.length-1) +"<br />");
+        document.write("Indesx of T is: " + combine.indexOf('t') + "<br \>");
+
+        var str_var = "5";
+        var num_var = 10;
+
+        var total = num_var + str_var;
+        var mult_total = num_var * str_var;
+
+        document.write("5 + 10 = "+ total + "<br />");
+        document.write("5 * 10 = "+ mult_total + "<br />");
+
+        total = num_var + Number(str_var);
+        document.write("5 + 10= " + total + "<br />");
+
+        var num_var2 = String(num_var);
+        document.write(num_var + num_var + "<br />");
+        document.write(num_var + num_var2 + "<br />");
+
+        var float_var = 3.1415294792874234;
+        var float_str = float_var.toFixed(5);
+        document.write("Shortened PI " + float_str + "<br />");
+
+        document.write("Interger PI " + parseInt(float_var) + "<br />");
+        document.write("Datatype of float_str " + typeof(float_str) + "<br />");
+        document.write("Datatype of float_var " + typeof (float_var) + "<br />");
+
+        //false (o or NaN) true
+        var bool_var = Boolean(23);
+        document.write("Boolean of 23 is " +bool_var+ "<br />");
+        
+        var rand_num1 = 5;
+        var rand_num2 = 10;
+
+        document.write("Is 5 > 10 " + (rand_num1 > rand_num2) + "<br />");
+        document.write("Is 5 >= 10 " + (rand_num1 >= rand_num2) + "<br />");
+        document.write("Is 5 < 10 " + (rand_num1 < rand_num2) + "<br />");
+        document.write("Is 5 <= 10 " + (rand_num1 <= rand_num2) + "<br />");
+        document.write("Is 5 == 10 " + (rand_num1 == rand_num2) + "<br />");
+        document.write("Is 5 != 10 " + (rand_num1 != rand_num2) + "<br />");
+
+        var vehicles = new Array("car", "truck", "van");
+        document.write("The second item in the array is :" + vehicles[1] + "<br />");
+
+        for (i in vehicles) {
+            document.write("Value in array " + vehicles[i] + "<br />");
+        }
+
+        var rand_var = (5 < 10) ? "5 is less than 10" : "5 is greater than 10";
+        document.write("rand_var equals " + rand_var + "<br />");
+
+        if (5 > 10) {
+            document.write("5 is greater than 10" + "<br />");
+        } else if (5 < 10) {
+            document.write("5 is less than 10" + "<br />");
+        } else {
+            document.write("5 is equal to 5" + "<br //");
+        }
+
+        var state = "Pennsylvania";
+
+        switch(state)
+        {
+            case "California":
+                document.write("Warmer than me " + "<br />");
+                break;
+
+            case "Pennsylvania":
+                document.write("Same as me "+"<br />");
+                break;
+
+            default:
+                document.write("I don't know " + "<br />");
+                break;
+        }
+
+        var count = 1;
+        while (count <= 10) {
+
+            document.write(count + "<br />");
+            count++;
+        }
+        // continue
+        var count = 1;
+        while (count <= 10) {
+            if (count % 2) {
+                count++;
+                continue;
+            }
+
+            document.write(count + "<br />");
+            count++;
+        }
+        // break
+        var count = 1;
+        while (count <= 10) {
+            if (count == 6) {
+                break;
+            }
+            if (count % 2) {
+                count++;
+                continue;
+            }
+
+            document.write(count + "<br />");
+            count++;
+        }
+
+        //do while
+        var count = 10;
+        
+        do {
+            document.write("do while "+count + "<br />");
+            count--;
+        } while (count > 10);
+
+        //for
+        document.write("for statement <br />");
+        for (var count = 0; count <= 10; count++) {
+            document.write(count + "<br />");
+        }
+
+        //function from extern js
+        document.write("5 + 25 = " + addThese(5, 25) + "<br />");
+
+    </script>
+    
+</body>
+</html>
